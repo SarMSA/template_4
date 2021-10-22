@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+:root {
+    --col-org: #FF9000;
+    --col-p-gray: #8f8f8f;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: sans-serif;
+    perspective: 1000px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 999px) {}
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1140px;
+    }
+}
+
+/* start navbar */
+nav {
+
+    background-color: #060C13;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+
+}
+
+nav h1 span {
+    color: var(--col-org);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+
+nav ul li a {
+    padding: 15px 40px;
+    color: #DADBDD;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 5px solid #060C13;
+
+}
+
+nav ul li a:hover {
+    background-color: #324D6B;
+    border-bottom: 5px solid var(--col-org);
+}
+
+/* end navbar */
+/* start header */
+header {
+    background: url("../images/Banner-bg.jpg");
+    margin-bottom: 100px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    transform: translate(10px, 50px);
+}
+
+header article {
+    width: 38%;
+}
+
+header .container article h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    font-size: 2.9rem;
+    line-height: 1;
+}
+
+header .container article h1 span {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--col-org);
+    display: block;
+}
+
+header .container article p {
+    color: #FFFDF7;
+    margin: 20px 0 25px;
+    font-style: italic;
+    text-align: justify;
+    line-height: 1.3;
+
+}
+
+header .container article button {
+    color: #FFFDF7;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color: #4B6881;
+    border: 2px solid #AEBBC7;
+}
+
+header .container .shadow-img {
+    position: relative;
+    width: 58%;
+    height: 450px;
+    transform-style: preserve-3d;
+    transform: inherit;
+}
+
+header .container .shadow-img .shadow {
+    position: absolute;
+    background: linear-gradient(to top, #424242db 60%, transparent);
+    filter: blur(5px);
+    bottom: -4px;
+    transform: skewX(32deg);
+    left: -15px;
+    width: 100%;
+    height: 60px;
+}
+
+header .container .img {
+    background: url("../images/img1.jpg");
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header .container .img .info {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header .info .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+header .info h5 {
+    width: 25%;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+header .info h5 span {
+    text-transform: none;
+    color: var(--col-org);
+    display: block;
+    font-weight: 200;
+}
+
+header .info .icons i {
+    margin-right: 5px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+header footer {
+    background: url("../images/bg2.png");
+    width: 100%;
+    height: 74px;
+}
+
+/* end header */
+/* start about us */
+.about-us .container {
+    text-align: center;
+}
+
+.about-us .container h1 {
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+
+.about-us .container p {
+    color: var(--col-p-gray);
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+.about-us .container hr {
+    background-color: var(--col-org);
+    height: 3px;
+    width: 30%;
+    border: none;
+    display: inline-block;
+}
+
+.about-us .about-info {
+    margin: 40px 0;
+}
+
+.about-us .about-info table {
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    display: inline-table;
+}
+
+.about-us .about-info table td {
+    border: 1px solid #D5D5D5;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    color: var(--col-p-gray);
+}
+
+.about-us .about-info table td:hover,
+.about-us .about-info table td.active {
+    border: 1px solid var(--col-org);
+    color: #fff;
+    background-color: var(--col-org);
+}
+
+.about-us .about-info figure {
+    display: flex;
+    justify-content: space-between;
+    text-align: left
+}
+
+.about-us .about-info figure .images {
+    width: 42%;
+    position: relative;
+}
+
+.about-us .about-info figure .images img {
+    width: 378px;
+    height: 222px;
+    position: absolute;
+    border: 5px solid white;
+    outline: 1px solid #ececec;
+    box-shadow: 0 20px 13px -19px var(--col-p-gray);
+
+
+}
+
+.about-us .about-info figure .images img:first-of-type {
+    transform: translate(70px, 0);
+}
+
+.about-us .about-info figure .images img:first-of-type:hover {
+    transform: translate(-70px, -35px) scale(1.1);
+    z-index: 2;
+}
+
+.about-us .about-info figure .images img:last-of-type {
+    transform: translate(35px, 35px);
+
+}
+
+.about-us .about-info figure .images img:last-of-type:hover {
+    transform: translate(-70px, -35px) scale(1.1);
+    z-index: 2;
+}
+
+.about-us .about-info figure article {
+    width: 54%;
+}
+
+.about-us .about-info figure article h2,
+.about-us .about-info figure article h5 {
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+
+.about-us .about-info figure article h5 {
+    color: var(--col-org);
+    margin-top: 5px;
+}
+
+/* end about us  */
+/* start services  */
+.services {
+    margin-top: 100px;
+    background: url("../images/Get-bg.jpg");
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.services .container {
+    text-align: center;
+}
+
+.services .container h1 {
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+
+.services .container p {
+    color: var(--col-p-gray);
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+.services .container hr {
+    background-color: var(--col-org);
+    height: 3px;
+    width: 30%;
+    border: none;
+    display: inline-block;
+}
+
+.services .service-info {
+    padding: 50px 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .service-info article {
+    width: 245px;
+    height: 387px;
+    padding-top: 60px;
+}
+
+.services .service-info article i {
+    padding: 24px;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services .service-info article span {
+    display: block;
+    text-transform: uppercase;
+}
+
+
+.services .service-info article:first-of-type {
+    background: url("../images/Development-bg.jpg");
+}
+
+.services .service-info article:first-of-type i {
+    border: 3px solid #57ADCE;
+    color: #57ADCE;
+}
+
+.services .service-info article:first-of-type span {
+    color: #57ADCE;
+}
+
+.services .service-info article:nth-of-type(2) {
+    background: url("../images/desgin-bg.jpg");
+}
+
+.services .service-info article:nth-of-type(2) i {
+    border: 3px solid var(--col-org);
+    color: var(--col-org);
+}
+
+.services .service-info article:nth-of-type(2) span {
+    color: var(--col-org);
+}
+
+.services .service-info article:nth-of-type(3) {
+    background: url("../images/concept-bg.jpg");
+}
+
+.services .service-info article:nth-of-type(3) i {
+    border: 3px solid #AA362B;
+    color: #AA362B;
+}
+
+.services .service-info article:nth-of-type(3) span {
+    color: #AA362B;
+}
+
+.services .service-info article:last-of-type {
+    background: url("../images/systam-bg.jpg");
+}
+
+.services .service-info article:last-of-type i {
+    border: 3px solid #5E5F61;
+    color: #5E5F61;
+}
+
+.services .service-info article:last-of-type span {
+    color: #5E5F61;
+}
+
+.services .service-info article:hover i {
+    border-color: #fff;
+    color: #fff;
+
+}
+
+.services .service-info article:hover span {
+    color: #fff;
+
+}
+
+/* end services  */
+/* start pricing  */
+.pricing {
+    background-color: #ECECEC;
+    padding: 100px 0;
+}
+
+.pricing .container {
+    text-align: center;
+}
+
+.pricing .container h1 {
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+
+.pricing .container p {
+    color: var(--col-p-gray);
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+.pricing .container hr {
+    background-color: var(--col-org);
+    height: 3px;
+    width: 30%;
+    border: none;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.pricing .pricing-info {
+    /* padding: 50px 0 100px; */
+    display: flex;
+    align-items: stretch;
+    text-transform: uppercase;
+    background-color: #AA362B;
+    margin-top: 10px;
+}
+
+
+.pricing .pricing-info>div:first-of-type {
+    background-color: var(--col-org);
+    width: 5%;
+    line-height: 1;
+    padding-top: 40px;
+}
+
+.pricing .pricing-info>div:nth-of-type(2) {
+    background-color: #2D2D2D;
+    color: var(--col-org);
+    width: 20%;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+.pricing .pricing-info>div:nth-of-type(3) {
+    background-color: #fff;
+    padding: 10px 0;
+    color: var(--col-p-gray);
+    display: flex;
+    width: 60%;
+
+}
+
+.pricing .pricing-info>div:nth-of-type(3) h4 {
+    border-right: 1.5px solid#CFCFCF;
+    padding: 15px 0;
+    width: 25%;
+
+}
+
+.pricing .pricing-info>div:nth-of-type(3) h4:last-of-type {
+    border: none;
+
+}
+
+.pricing .pricing-info>div:last-of-type {
+    width: 15%;
+}
+
+.pricing .pricing-info>div:last-of-type button {
+    background-color: #2D2D2D;
+    padding: 20px;
+    color: #FFf;
+    border: none;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* end pricing section  */
+/* start contact section  */
+.contact {
+    background: url("../images/Services-bg.jpg");
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact .container h1 {
+    text-transform: uppercase;
+    font-size: 2.9rem;
+    color: #fff;
+}
+
+.contact .container p {
+    color: var(--col-p-gray)#8f8f8f;
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+.contact .container hr {
+    background-color: var(--col-org);
+    height: 3px;
+    width: 30%;
+    border: none;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+footer .contact-info {
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+footer form input[type=submit] {
+    background-color: var(--col-org);
+    color: #fff;
+    font-weight: 900;
+}
+
+footer article {
+    width: 49%;
+}
+
+footer article h2 {
+    color: var(--col-org);
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+footer article table {
+    color: #DBE5D7;
+    margin-bottom: 20px;
+}
+
+footer article table td {
+    padding: 10px 10px 10px 0;
+}
+
+footer article i {
+    padding-right: 15px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+footer>div:last-of-type {
+    padding: 30px 0;
+    text-align: center;
+    background: url("../images/Contact-bg.jpg");
+    color: #DBE5D7;
+}
+
+/* end contact section  */
